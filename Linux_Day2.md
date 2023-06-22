@@ -160,11 +160,16 @@ VM can be run simultaneously but depends on various factos including physical re
 
 
 Virtual CPU. This virtual CPU emulates the behavior of a physical CPU and executes instructions within the virtual machine.
+
 Memory: This memory is dedicated to the virtual machine and is used to run the operating system and applications within it.
+
 Virtual Disks: Virtual machines have virtual disks that simulate physical hard drives or storage devices.
+
 Virtual Network Interfaces: These interfaces allow the virtual machine to send and receive data over the network.
+
 Operating System: A virtual machine runs its own operating system compatible with OS for example, linux
-Virtual Hardware Drivers:Hhardware drivers to interact with the virtualized hardware components.
+
+Virtual Hardware Drivers: hardware drivers to interact with the virtualized hardware components.
 
 
 # What software is required to orchestrate/run the virtual machines?
