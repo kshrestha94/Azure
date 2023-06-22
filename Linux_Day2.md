@@ -3,21 +3,37 @@
 # Commands of linux continues 
 
 ls - check files 
+
 cat <.txt file> - what is inside file 
+
 cat chicken-joke,txt | grep chicken/the - locate all lines that contains word
+
 apt - installs packages on linux machine  insta
+
 sudo apt install tree - install app tree, sometimes cannot install package. needs to know souce list.
+
 sudo apt-get update -y - update and say yes to all questions: do the update first before installing packages 
+
 cd / - root directory 
+
 cd adminuser - home director
+
 cd - home folder
+
 cd ~ home folder
+
 tree - to see structure of pwd
+
 mv - move file
+
 mkdir - make new folder
+
 rm - r -recursive (IMPORTANT COMMAND, WILL REMOVE FOLDERS)
+
 touch - make new file
+
 nano - 
+
 ls -l - check ownership of files 
 
 conclusion: navigate files and folders, new command prompts.
@@ -26,26 +42,43 @@ conclusion: navigate files and folders, new command prompts.
 # running and making scripts 
 
 script shell files end in (sh)
+
 make a new file 
+
 touch provision.sh
+
 ls -l check ownership (rw)
+
 path to bash shell: /bin/bash
+
 open new gitbash and try script commands before saving on bash 
 
 # First script automation
-# !/bin/bash
-# update -ensure source list is upto date
+
+#!/bin/bash
+
+update -ensure source list is upto date
+
 sudo apt update -y
-# upgrade -install lastest package in linux; there are situations where upgrade isnt  req
+
+upgrade -install lastest package in linux; there are situations where upgrade isnt  req
+
 sudo apt upgrade -y
-# install nginx (sudo systemctl status nginx - to check - ctl z to come out and enter)
+
+install nginx (sudo systemctl status nginx - to check - ctl z to come out and enter)
+
 sudo apt install nginx -y
-# restart nginx
+
+restart nginx
+
 sudo systemctl restart nginx
 
 enable nginx - when VM start/stops bash will autostart on reboot
+
 sudo systemctl status nginx
+
 cat provision.sh - check what is in provision.sh
+
 ./provision.sh - run provision bash script 
 
 #############################################################################
@@ -55,22 +88,35 @@ cat provision.sh - check what is in provision.sh
 Environment variables - value stored in memory; accessbile for other tools in linux; all defined in caps 
 
 printenv - print evironment variables
+
 printenv USER - print USER variable from list 
+
 echo "print" - show on screen
+
 MYNAME = kevin (saved variable in linux but not environment variable)
+
 echo $MYNAME - this will print kevin 
+
 export MYNAME=kevin - make it an environment variable 
+
 export MYCATSNAME=silkie - create env varibale straight 
 
 configure to keep env varibales persistant after loggin in - edit file bash rc
+
 nano .bashrc
+
 CATSNAME=Bobby save and exit 
+
 tail -5 .bashrc
+
 source .bashrc - reload bashrc to environment variable 
+
 printenv CATSNAME
+
 exit and login and check again
 
 ps - what processes is running in which terminal session 
+
 bash what shell your running? command: ps -p $$
 
 # PROCESSES in LINUX
