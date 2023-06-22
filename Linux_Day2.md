@@ -1,7 +1,7 @@
-## Linux Day 2 Markdown notes and Tasks  
+# Linux Day 2 Markdown notes and Tasks  
 
-# Commands of linux continues 
-
+## Commands of linux continues 
+```
 ls - check files 
 
 cat <.txt file> - what is inside file 
@@ -37,10 +37,10 @@ nano -
 ls -l - check ownership of files 
 
 conclusion: navigate files and folders, new command prompts.
-
+```
 ############################ scripting ######################################
-# running and making scripts 
-
+## running and making scripts 
+```
 script shell files end in (sh)
 
 make a new file 
@@ -52,9 +52,9 @@ ls -l check ownership (rw)
 path to bash shell: /bin/bash
 
 open new gitbash and try script commands before saving on bash 
-
-# First script automation
-
+```
+## First script automation
+```
 #!/bin/bash
 
 update -ensure source list is upto date
@@ -80,11 +80,10 @@ sudo systemctl status nginx
 cat provision.sh - check what is in provision.sh
 
 ./provision.sh - run provision bash script 
+```
 
-#############################################################################
-
-# Environmental Variables 
-
+## Environmental Variables 
+```
 Environment variables - value stored in memory; accessbile for other tools in linux; all defined in caps 
 
 printenv - print evironment variables
@@ -118,8 +117,9 @@ exit and login and check again
 ps - what processes is running in which terminal session 
 
 bash what shell your running? command: ps -p $$
-
-# PROCESSES in LINUX
+```
+```
+## PROCESSES in LINUX
 there are two types of processes!
 
 1. system processes ps -A, ps aux - this gives your more information all processes. system and user
@@ -127,37 +127,37 @@ there are two types of processes!
 2. user processes: ps command brings up user processes 
 
 every process has a process id. (PID) something always has to start the process. parent process needs to start child process.
+```
 
+# Task 1.4.1 What is virtualisation?
 
-## Task 1.4.1 What is virtualisation?
-
-# What is virtualisation?
-
+## What is virtualisation?
+```
 The process of creating a virtual version of a computer Operating system or resources, such as hardware, operating systems, storage devices, or network resources. It allows multiple virtual machines or environments to run concurrently on a single physical computer or server.
 
 types inc:
 hardware, desktop, application, storage and network
-
+```
 What is a virtual machine?
-
+```
 A software emulation of a physical computer system. It is created within a virtualization environment and operates as a self-contained entity with its own virtualized hardware components, including a virtual CPU, memory, storage, and network interfaces.
-
-# Where can they be run?
-
+```
+## Where can they be run?
+```
 desktops 
 servers 
 cloud computing 
 virtualization platforms
 containerized environments 
+```
 
-
-# What determines how many can run?
-
+## What determines how many can run?
+```
 VM can be run simultaneously but depends on various factos including physical resourceses, resource allocation, workload characteristics, hypervisor efficiency, VM configeration and adminstrative policies. Ensure capacity planning and performance testing to determin optimal number of VMs.
+```
 
-
-# What does a virtual machine include?
-
+## What does a virtual machine include?
+```
 
 Virtual CPU. This virtual CPU emulates the behavior of a physical CPU and executes instructions within the virtual machine.
 
@@ -170,10 +170,10 @@ Virtual Network Interfaces: These interfaces allow the virtual machine to send a
 Operating System: A virtual machine runs its own operating system compatible with OS for example, linux
 
 Virtual Hardware Drivers: hardware drivers to interact with the virtualized hardware components.
+```
 
-
-# What software is required to orchestrate/run the virtual machines?
-
+## What software is required to orchestrate/run the virtual machines?
+```
 Virtual machines require virtualization platforms and hypervisor software. Examples of some software include:
 
 VMware vSphere
@@ -181,17 +181,17 @@ Microsoft Hyper-V
 KVM (Kernel-based Virtual Machine)
 Xen
 Oracle VM VirtualBox
-
-# What is the importance of an image when creating an VM?
-
+```
+## What is the importance of an image when creating an VM?
+```
 reproducibility 
 time saving 
 consistency 
 standarization
 versioning and rollback 
 security
-
-# VM and Annotations 
+```
+## VM and Annotations 
 
 ![Alt text](<VM Diagram .png>)
 
