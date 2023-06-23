@@ -3,8 +3,8 @@
 ```
 Starting your virtual machine VM
 1. open Azure and click on the tab Virtual Machine and select your VM created. press start and ok. status should state running when working.
-2. click connect and enter public key path:    ~/.ssh/tech241-kevin-az-key. Then copy on clipbaord
-3. copy onto clipboard the run example command   ssh -i ~/.ssh/tech241-kevin-az-key adminuser@20.58.21.167
+2. click connect and enter public key path:    
+3. copy onto clipboard the run example command   
 4. to exit VM hit command exit and stop VM on Azure
  
 what is Linux and why are we using it ?
@@ -48,21 +48,21 @@ Linux also has a shell.
 
 ```
 Why is managing file ownership important?
-Managing file ownership is important as it ensures data security, accountability, collaboration, system administration, and compliance with various standards.
+Ensures data security, accountability, collaboration, system administration, and compliance with various standards.
 
 What is the command to view file ownership?
 The command syntax to view file owenership is ls-l
-To view file ownershio of a specific file ls -l <file name>
+To view file ownership of a specific file ls -l <file name>
 
 What permissions are set when a user creates a file or directory? Who does file or directory belong to?
 The default permissions and ownership of a file/directory is determined by the umask value and the user's account settings at the time of creation. The file or directory is owned by the user who created it; linked to the user account that was used to create the file or directory.
 
 Why does the owner, by default, not receive X permissions when they create a file?
-The owner by default does not receive X permissions when they create a file to improve security and prevent accidental execution of files.
-The file owner can manually grant execute permissions to themselves or others using the command chmod. This allows control over which files should be executed as programs, preventing accidental execution and security vulnerabilities.
+To improve security and prevent accidental execution of files. The file owner can manually grant execute permissions to themselves or others using the command chmod. This allows control over which files should be executed as programs, preventing accidental execution and security vulnerabilities.
 
 What command is used to change the owner of a file or directory?
-The command  chown allows you to change the ownership of a file or directory, granting ownership to a specific user or group. General syntax: chown new_owner <file_or_directory>
+The command  "chown" allows you to change the ownership of a file or directory, granting ownership to a specific user or group. 
+General syntax: chown new_owner <file_or_directory>
 
 ```
 ## 2.8b task
@@ -72,16 +72,29 @@ Ownership determines who owns the file and who has certain administrative privil
 Permissions define the access rights granted to the owner, members of the file's group, and others in terms of reading (r), writing (w), and executing (x) the file. Permissions can be set independently for each category of users.
 
 If you give permissions to the User entity, what does this mean?
-There are three basic permissions given to the user entity. When the Read permission is granted, the owner can view the contents of the file. They can read the file's content but cannot modify or execute it unless they have additional permissions.
+
+There are three basic permissions given to the user entity. 
+read 
+write 
+execute 
+
+When the Read permission is granted, the owner can view the contents of the file. 
 Write permission, the owner can modify the file. This includes editing the content of the file, appending new data, or deleting its contents. 
-Execute permission allows the owner to execute the file as a program or script if it is an executable file. Execute permission is typically used for scripts, binaries, or programs. If the User entity lacks execute permission, they cannot execute the file as a program, even if they have ownership.
+Execute permission allows the owner to execute the file as a program or script if it is an executable file. Execute permission is typically used for scripts, binaries, or programs. 
+If the User entity lacks execute permission, they cannot execute the file as a program, even if they have ownership.
+
+
 
 If you give permissions to the Group entity, what does this mean?
+
 Read (r) permission: If granted to the Group entity, all users who are part of that group can read the contents of the file, view its attributes, and list the file's directory contents.
 Write (w) permission: With write permission, the group members can modify the file, append to it, or delete its contents. They can also rename or move the file within the same directory.
 Execute (x) permission: Execute permission allows the group members to execute the file if it is a program, script, or executable file. They can run the file as a command or script, triggering its functionality.
 
+
+
 If you give permissions to the Other entity, what does this mean?
+
 Read (r) permission: If granted to the Other entity, all users who are not the owner or part of the group associated with the file can read the contents of the file, view its attributes, and list the file's directory contents.
 Write (w) permission: With write permission, the other users can modify the file, append to it, or delete its contents. They can also rename or move the file within the same directory.
 Execute (x) permission: Execute permission allows the other users to execute the file if it is a program, script, or executable file. They can run the file as a command or script, triggering its functionality.
@@ -89,11 +102,12 @@ Execute (x) permission: Execute permission allows the other users to execute the
 You give the following permissions to a file: User permissions are read-only, Group permissions are read and write, Other permissions are read, write and execute. You are logged in as the user which is owner of the file. What permissions will you have on this file? Explain.
 As the owner of the file, you will have read-only access to the file based on the User entity permissions. If you want to modify the file or execute it as a program, you would need to change the permissions accordingly, granting yourself the necessary access rights.
 
+
 Here is one line from the ls -l. Work everything you can about permissions on this file or directory.
+
 The owner (User entity) has read, write, and execute permissions (rwx).
 The group (Group entity) has read and execute permissions (r-x).
 Others (Other entity) have read-only permissions (r--).
-
 
 ```
 
@@ -143,8 +157,13 @@ Take write permissions away from Group
 chmod g-w testfile.txt
 
 Use numeric values to give read + write access to User, read access to Group, and no access to Other.
-
 chmod 640 testfile.txt
+
+user 
+group
+other
+
+
 
 
 
@@ -152,7 +171,3 @@ chmod 640 testfile.txt
 
 
 ```
-
-
-
-
