@@ -65,7 +65,7 @@ sudo systemctl start mongod
 sudo systemctl status mongod
 
 export DB_HOST=mongodb://172.187.179.8:27017/posts
-ssh -i ~/.ssh/tech241-kevin-az-key adminuser@20.58.21.167
+# insert SSH KEY
 cd sparta_aap_gitclone_method/app/
 export DB_HOST=mongodb://172.187.179.8:27017/posts
 printenv DB_HOST
