@@ -1,5 +1,5 @@
 ########################################################################## Reverse Proxy method:
-
+```
 1.sudo nano /etc/nginx/sites-available/default [nano into your default ]
 
 2. "REPLACE" line: try_files $uri $uri/ =404; with proxy_pass http://localhost:3000; [relace http with new proxy pass]
@@ -9,7 +9,7 @@
 
 
 4. sudo systemctl restart nginx [restart nginx]
-
+```
 ######################################################################### VM Script 
 ```
 #!/bin/bash
